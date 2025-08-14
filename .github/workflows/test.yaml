@@ -40,7 +40,7 @@ jobs:
     if: needs.permission_check_static.outputs.can-run-static == 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Provision DCE (Static)
         uses: ./
         with:
@@ -64,7 +64,7 @@ jobs:
     if: needs.permission_check_federated.outputs.can-run-federated == 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Provision DCE (Federated)
         uses: ./
         with:
